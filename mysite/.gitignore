@@ -1,0 +1,3 @@
+*.pyc
+polls/static/
+db.sqlite3

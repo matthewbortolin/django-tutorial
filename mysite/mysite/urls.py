@@ -16,7 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from mysite.views import hello_world, root_page, random_number
+
 urlpatterns = [
 	url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^helloworld/$', hello_world),
+    url(r'^$', root_page),
+    url(r'^random/(\d+)/$', random_number),
 ]
